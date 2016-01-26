@@ -3,27 +3,27 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camara"
+            android:id="@+id/m_caixa"
             android:icon="@android:drawable/ic_menu_camera"
             android:title="Caixa" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/m_bradesco"
             android:icon="@android:drawable/ic_menu_gallery"
             android:title="Bradesco" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/m_itau"
             android:icon="@android:drawable/ic_menu_slideshow"
             android:title="Itaú" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/m_bb"
             android:icon="@android:drawable/ic_menu_manage"
             android:title="Banco do Brasil" />
         <item
-            android:id="@+id/hsbc"
+            android:id="@+id/m_hsbc"
             android:icon="@android:drawable/ic_menu_manage"
             android:title="HSBC" />
         <item
-            android:id="@+id/santander"
+            android:id="@+id/m_santander"
             android:icon="@android:drawable/ic_menu_manage"
             android:title="Santander" />
     </group>

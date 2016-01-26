@@ -1,5 +1,7 @@
 package com.souniversitario.souniversitario_guiaeconomico;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -32,6 +34,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Fragment fragment = new CaixaFragment();
+        inicializaFragment(fragment);
+    }
+
+    private void inicializaFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
     }
 
     @Override
@@ -72,18 +84,28 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            setContentView(R.layout.bradesco_layout);
+        if (id == R.id.m_caixa) {
+            Fragment fragment = new CaixaFragment();
+            inicializaFragment(fragment);
+        } else if (id == R.id.m_bradesco) {
+            Fragment fragment = new BradescoFragment();
+            inicializaFragment(fragment);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.m_itau) {
+            Fragment fragment = new ItauFragment();
+            inicializaFragment(fragment);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.m_bb) {
+            Fragment fragment = new BbFragment();
+            inicializaFragment(fragment);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.m_hsbc) {
+            Fragment fragment = new HsbcFragment();
+            inicializaFragment(fragment);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.m_santander) {
+            Fragment fragment = new SantanderFragment();
+            inicializaFragment(fragment);
 
         }
 
